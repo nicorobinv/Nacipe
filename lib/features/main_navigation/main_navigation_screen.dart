@@ -17,6 +17,9 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       child: HomeScreen(),
     ),
     const Center(
+      child: Text("favorite"),
+    ),
+    const Center(
       child: Text("Info"),
     ),
   ];
@@ -32,15 +35,29 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     return Scaffold(
         body: screens[_selectedIndex],
         bottomNavigationBar: NavigationBar(
+          backgroundColor: const Color(0xFF563850),
           selectedIndex: _selectedIndex,
           onDestinationSelected: _onTap,
           destinations: const [
             NavigationDestination(
-              icon: FaIcon(FontAwesomeIcons.house),
+              icon: FaIcon(
+                FontAwesomeIcons.house,
+                color: Color(0xFF897685),
+              ),
               label: "Home",
             ),
             NavigationDestination(
-              icon: FaIcon(FontAwesomeIcons.person),
+              icon: FaIcon(
+                FontAwesomeIcons.solidHeart,
+                color: Color(0xFF897685),
+              ),
+              label: "Info",
+            ),
+            NavigationDestination(
+              icon: FaIcon(
+                FontAwesomeIcons.person,
+                color: Color(0xFF897685),
+              ),
               label: "Info",
             ),
           ],
