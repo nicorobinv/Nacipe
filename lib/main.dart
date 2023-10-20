@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nacipe/features/main_navigation/main_navigation_screen.dart';
 
 void main() {
   runApp(const NacipeApp());
@@ -15,7 +16,7 @@ class NacipeApp extends StatelessWidget {
         primaryColor: const Color(0x00fee501),
         useMaterial3: true,
       ),
-      home: Container(),
+      home: const MainNavigationScreen(),
     );
   }
 }
